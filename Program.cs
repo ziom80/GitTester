@@ -8,6 +8,7 @@ namespace GitTester
         {
             Console.WriteLine("Hello World!");
             //branch master
+            //zminay branch b
         }
     }
 }
