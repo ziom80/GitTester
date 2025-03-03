@@ -13,6 +13,8 @@ namespace GitTester
             //zmiana d
             //zmiana e
             //zmiana dd
+
+            //commit 1
             
         }
     }
