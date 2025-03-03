@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Transactions;
 
 namespace GitTester
 {
@@ -13,6 +14,14 @@ namespace GitTester
             //zmiana d
             //zmiana e
             //zmiana dd
+
+            //commit 1
+            //commit 2
+            //commit 3 
+            
+
+            //commit 6
+            //commit 7
             
         }
     }
