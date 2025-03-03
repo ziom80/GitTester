@@ -15,6 +15,7 @@ namespace GitTester
             //zmiana dd
 
             //commit 1
+            //commit 2
             
         }
     }
