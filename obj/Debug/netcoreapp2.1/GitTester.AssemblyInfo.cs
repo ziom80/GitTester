@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GitTester")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd5f7d159f9b6e9ad227bb95c34255b10b74b868")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+01d303a3d9f0cbc26f7a344b2d298d8deef95dd6")]
 [assembly: System.Reflection.AssemblyProductAttribute("GitTester")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GitTester")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
