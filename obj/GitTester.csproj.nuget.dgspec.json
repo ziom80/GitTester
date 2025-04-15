@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\advancedcsharp\\GitTrainer\\GitTester\\GitTester.csproj": {}
+    "D:\\Projekty\\Jenkins\\GitTester\\GitTester.csproj": {}
   },
   "projects": {
-    "D:\\advancedcsharp\\GitTrainer\\GitTester\\GitTester.csproj": {
+    "D:\\Projekty\\Jenkins\\GitTester\\GitTester.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\advancedcsharp\\GitTrainer\\GitTester\\GitTester.csproj",
+        "projectUniqueName": "D:\\Projekty\\Jenkins\\GitTester\\GitTester.csproj",
         "projectName": "GitTester",
-        "projectPath": "D:\\advancedcsharp\\GitTrainer\\GitTester\\GitTester.csproj",
+        "projectPath": "D:\\Projekty\\Jenkins\\GitTester\\GitTester.csproj",
         "packagesPath": "C:\\Users\\marci\\.nuget\\packages\\",
-        "outputPath": "D:\\advancedcsharp\\GitTrainer\\GitTester\\obj\\",
+        "outputPath": "D:\\Projekty\\Jenkins\\GitTester\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

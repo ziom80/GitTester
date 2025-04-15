@@ -1,6 +1,6 @@
 is_global = true
 build_property.RootNamespace = GitTester
-build_property.ProjectDir = D:\advancedcsharp\GitTrainer\GitTester\
+build_property.ProjectDir = D:\Projekty\Jenkins\GitTester\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.CsWinRTUseWindowsUIXamlProjections = false
