@@ -37,6 +37,16 @@ pipeline {
         }
 
 
+        stage('Install ICU') {
+                steps {
+                    sh '''
+                        sudo apt-get update
+                        sudo apt-get install -y libicu-dev
+                    '''
+                }
+            }
+
+
          stage('Install .NET Core SDK 2.1') {
                 steps {
                 sh '''
