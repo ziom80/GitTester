@@ -36,17 +36,7 @@ pipeline {
             }
         }
 
-
-        stage('Set Invariant Globalization') {
-            steps {
-                sh '''
-                    export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true
-                    export PATH=$HOME/.dotnet:$PATH
-                    dotnet --version
-                '''
-            }
-        }
-
+       
 
          stage('Install .NET Core SDK 2.1') {
                 steps {
@@ -68,6 +58,9 @@ pipeline {
         
                     # Add to PATH for this session
                     export PATH=$HOME/.dotnet:$PATH
+
+                     export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true
+                     export PATH=$HOME/.dotnet:$PATH
         
                     # Verify installation
                     $HOME/.dotnet/dotnet --version
