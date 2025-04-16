@@ -8,6 +8,10 @@ pipeline {
     }
 
 
+   
+       
+    
+
     stages {
         stage('Check OS') {
             steps {
@@ -20,9 +24,8 @@ pipeline {
                 }
             }
         }
-    }
 
-    stages {
+        
         stage('Checkout') {
             steps {
                 echo 'Cloning repository..'
