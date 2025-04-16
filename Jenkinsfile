@@ -76,7 +76,7 @@ pipeline {
                         export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true
                         export DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER=0
                         dotnet --version
-                        //dotnet restore GitTester.csproj
+                        
                         dotnet build GitTester.csproj -c Release
                     '''
                 }
