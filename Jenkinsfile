@@ -79,24 +79,20 @@ pipeline {
 
         
 
-        stage('Restore .NET Dependencies') {
-            steps {
-                sh '''
-                    export PATH=$HOME/.dotnet:$PATH
-                    export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true  # Avoid ICU error
-                    dotnet --version
-                    dotnet restore GitTester.csproj
-                '''
-            }
-        }
-
-        stage('Build Application') {
-            steps {
-                script {
-                    sh 'dotnet build GitTester.csproj --configuration Release --no-restore'
+       stage('Build .NET Console App') {
+                steps {
+                    sh '''
+                        export PATH=$HOME/.dotnet:$PATH
+                        export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true
+                        export DOTNET_SYSTEM_NET_HTTP_USESOCKETSHTTPHANDLER=0
+                        dotnet --version
+                        dotnet restore GitTester.csproj
+                        dotnet build GitTester.csproj -c Release
+                    '''
                 }
             }
-        }
+
+       
 
         stage('Test') {
             steps {
