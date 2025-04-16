@@ -40,8 +40,8 @@ pipeline {
         stage('Install ICU') {
                 steps {
                     sh '''
-                        sudo apt-get update
-                        sudo apt-get install -y libicu-dev
+                        apt-get update
+                        apt-get install -y libicu-dev
                     '''
                 }
             }
