@@ -70,11 +70,14 @@ pipeline {
 
         
 
-        stage('Restore Dependencies') {
+        stage('Restore .NET Dependencies') {
             steps {
-                script {
-                    sh 'dotnet restore GitTester.csproj'
-                }
+                sh '''
+                    export PATH=$HOME/.dotnet:$PATH
+                    export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true  # Avoid ICU error
+                    dotnet --version
+                    dotnet restore GitTester.csproj
+                '''
             }
         }
 
