@@ -1,6 +1,20 @@
 pipeline {
     agent any
 
+    stages {
+        stage('Check OS') {
+            steps {
+                script {
+                    if (isUnix()) {
+                        sh 'uname -a'
+                    } else {
+                        bat 'ver'
+                    }
+                }
+            }
+        }
+    }
+
     triggers {
         cron('H/15 * * * *')  // This runs the pipeline every 15 minutes
     }
