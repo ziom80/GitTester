@@ -68,6 +68,15 @@ pipeline {
             }
         }
 
+        stage('Install OpenSSL') {
+            steps {
+                sh '''
+                    apt-get update
+                    apt-get install -y libssl1.1 || sudo apt-get install -y libssl1.0.0 || sudo apt-get install -y libssl-dev
+                '''
+            }
+        }
+
         
 
         stage('Restore .NET Dependencies') {
