@@ -25,7 +25,19 @@ pipeline {
             }
         }
 
-               stage('Install .NET Core SDK 2.1') {
+        
+
+
+        
+        stage('Checkout') {
+            steps {
+                echo 'Cloning repository..'
+                checkout scm
+            }
+        }
+
+
+         stage('Install .NET Core SDK 2.1') {
                 steps {
                 sh '''
                     # Download dotnet-install.sh if wget is missing, try curl
@@ -52,14 +64,7 @@ pipeline {
             }
         }
 
-
         
-        stage('Checkout') {
-            steps {
-                echo 'Cloning repository..'
-                checkout scm
-            }
-        }
 
         stage('Restore Dependencies') {
             steps {
