@@ -37,14 +37,15 @@ pipeline {
         }
 
 
-        stage('Install ICU') {
-                steps {
-                    sh '''
-                        apt-get update
-                        apt-get install -y libicu-dev
-                    '''
-                }
+        stage('Set Invariant Globalization') {
+            steps {
+                sh '''
+                    export DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=true
+                    export PATH=$HOME/.dotnet:$PATH
+                    dotnet --version
+                '''
             }
+        }
 
 
          stage('Install .NET Core SDK 2.1') {
