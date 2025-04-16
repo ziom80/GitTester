@@ -1,6 +1,13 @@
 pipeline {
     agent any
 
+    
+
+    triggers {
+        cron('H/15 * * * *')  // This runs the pipeline every 15 minutes
+    }
+
+
     stages {
         stage('Check OS') {
             steps {
@@ -13,10 +20,6 @@ pipeline {
                 }
             }
         }
-    }
-
-    triggers {
-        cron('H/15 * * * *')  // This runs the pipeline every 15 minutes
     }
 
     stages {
