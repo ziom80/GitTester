@@ -72,7 +72,7 @@ pipeline {
             steps {
                 sh '''
                     apt-get update
-                    apt-get install -y libssl1.1 || sudo apt-get install -y libssl1.0.0 || sudo apt-get install -y libssl-dev
+                    apt-get install -y libssl1.1 || apt-get install -y libssl1.0.0 || apt-get install -y libssl-dev
                 '''
             }
         }
