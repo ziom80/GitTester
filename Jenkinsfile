@@ -16,7 +16,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the application...'
-               bat 'dotnet build GitTester.csproj --configuration Release --no-restore'
+               sh 'dotnet build GitTester.csproj --configuration Release --no-restore'
                 // For example: compiling Java or building Docker images
             }
         }
