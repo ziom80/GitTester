@@ -13,11 +13,19 @@ pipeline {
             }
         }
 
-        stage('Build') {
+        stage('Restore Dependencies') {
             steps {
-                echo 'Building the application...'
-               sh 'dotnet build GitTester.csproj --configuration Release --no-restore'
-                // For example: compiling Java or building Docker images
+                script {
+                    sh 'dotnet restore GitTester.csproj'
+                }
+            }
+        }
+
+        stage('Build Application') {
+            steps {
+                script {
+                    sh 'dotnet build GitTester.csproj --configuration Release --no-restore'
+                }
             }
         }
 
